@@ -1,3 +1,29 @@
 {
-    "welcome": "Welcome"
+  "header-navigation": {
+    "home": "Home",
+    "about_us": "About Us",
+    "services": "Services",
+    "blog": "Blog",
+    "our_team": "Our Team",
+    "contact_us": "Contact Us",
+
+    "legal_consultation_services": "Legal Consultation Services",
+    "tax_law_services": "Tax Law Services",
+    "corporate_services": "Corporate Services",
+    "contract_review": "Contract Review",
+    "business_setup": "Business Setup",
+    "intellectual_property": "Intellectual Property",
+    "employment_law": "Employment Law",
+    "real_estate_law": "Real Estate Law",
+    "family_law": "Family Law",
+    "dispute_resolution": "Dispute Resolution",
+    "immigration_law": "Immigration Law",
+    "environmental_law": "Environmental Law",
+    "corporate_governance": "Corporate Governance",
+    "commercial_litigation": "Commercial Litigation",
+    "financial_regulation": "Financial Regulation",
+
+    "book_appointment": "Book Appointment",
+    "search": "Search"
+  }
 }

@@ -1,3 +1,29 @@
 {
-    "welcome": "مرحبا"
+  "header-navigation": {
+    "home": "الرئيسية",
+    "about_us": "من نحن",
+    "services": "الخدمات",
+    "blog": "المدونة",
+    "our_team": "فريقنا",
+    "contact_us": "اتصل بنا",
+
+    "legal_consultation_services": "خدمات الاستشارات القانونية",
+    "tax_law_services": "خدمات قانون الضرائب",
+    "corporate_services": "الخدمات القانونية للشركات",
+    "contract_review": "مراجعة العقود",
+    "business_setup": "تأسيس الأعمال",
+    "intellectual_property": "الملكية الفكرية",
+    "employment_law": "قانون العمل",
+    "real_estate_law": "قانون العقارات",
+    "family_law": "قانون الأسرة",
+    "dispute_resolution": "حل النزاعات",
+    "immigration_law": "قانون الهجرة",
+    "environmental_law": "القانون البيئي",
+    "corporate_governance": "حوكمة الشركات",
+    "commercial_litigation": "التقاضي التجاري",
+    "financial_regulation": "التنظيم المالي",
+
+    "book_appointment": "حجز موعد",
+    "search": "بحث"
+  }
 }
