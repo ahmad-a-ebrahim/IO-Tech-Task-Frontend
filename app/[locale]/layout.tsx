@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cairo } from "next/font/google";
+import { Cairo, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
@@ -7,10 +7,10 @@ import { routing } from "@/i18n/routing";
 import HeaderNavigation from "@/components/core/HeaderNavigation";
 import Footer from "@/components/core/Footer";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const cairo = Cairo({
@@ -39,7 +39,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body className={`${inter.variable} ${cairo.variable} antialiased`}>
+      <body className={`${dmSans.variable} ${cairo.variable} antialiased`}>
         <NextIntlClientProvider>
           <HeaderNavigation />
           {children}

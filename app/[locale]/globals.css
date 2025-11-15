@@ -7,7 +7,7 @@
   --primary: #4b2615;
   --primary-foreground: #ffffff;
 
-  --font-inter: "Inter", Arial, Helvetica, sans-serif;
+  --font-dm-sans: "DM Sans", Arial, Helvetica, sans-serif;
   --font-cairo: "Cairo", Arial, Helvetica, sans-serif;
 }
 
@@ -18,10 +18,10 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
 
-  --font-sans: "Inter", Arial, Helvetica, sans-serif;
-  --font-mono: "Inter", monospace;
+  --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
+  --font-mono: "DM Sans", monospace;
 
-  --font-inter: "Inter", Arial, Helvetica, sans-serif;
+  --font-dm-sans: "DM Sans", Arial, Helvetica, sans-serif;
   --font-cairo: "Cairo", Arial, Helvetica, sans-serif;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 [dir="ltr"] {
-  font-family: var(--font-inter);
+  font-family: var(--font-dm-sans);
 }
 
 [dir="rtl"] {
