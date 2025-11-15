@@ -5,39 +5,25 @@ import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import "@/styles/hero/hero.css";
-import { Locale } from "@/types";
 
-const fakeData = [
-  {
-    title: {
-      en: "John Doe",
-      ar: "جون دو",
-    },
-    description: {
-      en: "Full-stack developer with a passion for clean code.",
-      ar: "مطور شامل (Full-stack developer) بشغف للكود النظيف.",
-    },
-    profile_image: "https://randomuser.me/api/portraits/men/22.jpg",
-    cover_image: "https://picsum.photos/800/300?random=76",
-  },
-  {
-    title: {
-      en: "Jane Smith",
-      ar: "جين سميث",
-    },
-    description: {
-      en: "Product designer focusing on user experience and visuals.",
-      ar: "مصممة منتجات تركز على تجربة المستخدم والمرئيات.",
-    },
-    profile_image: "https://randomuser.me/api/portraits/men/99.jpg",
-    cover_image: "https://picsum.photos/800/300?random=60",
-  },
-];
+type Profile = {
+  id: string;
+  title: string;
+  sub_title: string;
+  profile_picture: string;
+  cover_picture: string;
+  createdAt: string;
+  updatedAt: string;
+};
 
-const Hero = () => {
+type HeroProps = {
+  profiles: Profile[];
+};
+
+const Hero = ({ profiles }: HeroProps) => {
   const t = useTranslations("hero");
   const locale = useLocale();
-  const totalSlides = fakeData.length;
+  const totalSlides = profiles.length;
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [prevSlideIndex, setPrevSlideIndex] = useState<number | null>(null);
@@ -105,7 +91,7 @@ const Hero = () => {
             }`}
           >
             <Image
-              src={fakeData[prevSlideIndex].cover_image}
+              src={profiles[prevSlideIndex].cover_picture}
               alt="Cover Image"
               fill
               className="object-cover"
@@ -129,7 +115,7 @@ const Hero = () => {
           }`}
         >
           <Image
-            src={fakeData[activeSlideIndex].cover_image}
+            src={profiles[activeSlideIndex].cover_picture}
             alt="Cover Image"
             fill
             className="object-cover"
@@ -195,7 +181,7 @@ const Hero = () => {
           >
             <div className="flex flex-col gap-5">
               <Image
-                src={fakeData[activeSlideIndex].profile_image}
+                src={profiles[activeSlideIndex].profile_picture}
                 alt="Profile Image"
                 width={263}
                 height={263}
@@ -207,10 +193,10 @@ const Hero = () => {
                 key={`profile-${activeSlideIndex}`}
               />
               <p className="text-5xl sm:text-7xl text-primary-foreground font-bold">
-                {fakeData[activeSlideIndex].title[locale as Locale]}
+                {profiles[activeSlideIndex].title}
               </p>
               <p className="text-lg text-primary-foreground font-normal">
-                {fakeData[activeSlideIndex].description[locale as Locale]}
+                {profiles[activeSlideIndex].sub_title}
               </p>
             </div>
 
@@ -220,7 +206,7 @@ const Hero = () => {
           </div>
 
           <Image
-            src={fakeData[activeSlideIndex].profile_image}
+            src={profiles[activeSlideIndex].profile_picture}
             alt="Profile Image"
             width={374}
             height={374}

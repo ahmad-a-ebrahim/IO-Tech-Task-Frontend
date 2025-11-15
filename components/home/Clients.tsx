@@ -5,72 +5,19 @@ import { useLocale } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Locale } from "@/types";
 
-const fakeData = [
-  {
-    name: {
-      en: "Fatima Al-Zahra",
-      ar: "فاطمة الزهراء",
-    },
-    position: {
-      en: "Digital Marketing Manager",
-      ar: "مُديرة تسويق رقمي",
-    },
-    review: {
-      en: "This product exceeded all my expectations. The speed of performance and the outstanding technical support made my work significantly easier. I highly recommend it to anyone looking for high-quality solutions.",
-      ar: "لقد تجاوز هذا المنتج توقعاتي بالكامل. السرعة في الأداء والدعم الفني المتميز جعلت عملي أسهل بكثير. أوصي به بشدة لأي شخص يبحث عن حلول عالية الجودة.",
-    },
-    image: "https://randomuser.me/api/portraits/women/33.jpg",
-  },
-  {
-    name: {
-      en: "Khaled Al-Mansour",
-      ar: "خالد المنصور",
-    },
-    position: {
-      en: "Startup Founder",
-      ar: "مؤسس شركة ناشئة",
-    },
-    review: {
-      en: "Thanks to the tools they provide, we achieved a 40% growth in just three months. The user interface is highly intuitive, saving us a massive amount of time and effort.",
-      ar: "بفضل الأدوات التي يقدمونها، تمكنا من تحقيق نمو بنسبة 40% في ثلاثة أشهر فقط. واجهة المستخدم بديهية للغاية، مما يوفر علينا قدراً هائلاً من الوقت والجهد.",
-    },
-    image: "https://randomuser.me/api/portraits/women/34.jpg",
-  },
-  {
-    name: {
-      en: "Laila Abdullah",
-      ar: "ليلى عبد الله",
-    },
-    position: {
-      en: "Frontend Developer",
-      ar: "مُطورة واجهات أمامية",
-    },
-    review: {
-      en: "The flexibility and precision offered by this system are unmatched. It helped me streamline a complex workflow and achieve more professional results in record time.",
-      ar: "المرونة والدقة التي يوفرها هذا النظام لا مثيل لها. لقد ساعدني في تبسيط سير العمل المعقد وتحقيق نتائج أكثر احترافية في وقت قياسي.",
-    },
-    image: "https://randomuser.me/api/portraits/women/35.jpg",
-  },
-  {
-    name: {
-      en: "Yousef Al-Najjar",
-      ar: "يوسف النجار",
-    },
-    position: {
-      en: "Financial Consultant",
-      ar: "مُستشار مالي",
-    },
-    review: {
-      en: "Their customer service is exceptional. They were quick to respond and resolved my issue within minutes. This is the gold standard for quality and professionalism.",
-      ar: "خدمة العملاء لديهم استثنائية. كانوا سريعين في الاستجابة وحلوا مشكلتي في دقائق. هذا هو المعيار الذهبي للجودة والاحترافية.",
-    },
-    image: "https://randomuser.me/api/portraits/women/36.jpg",
-  },
-];
+type Client = {
+  image: string;
+  name: string;
+  position: string;
+  review: string;
+};
 
-const Clients = () => {
+type ClientsProps = {
+  clients: Client[];
+};
+
+const Clients = ({ clients }: ClientsProps) => {
   const locale = useLocale();
   const t = useTranslations("client");
 
@@ -78,7 +25,7 @@ const Clients = () => {
   const [fade, setFade] = useState(false);
 
   const goNext = () => {
-    if (activeSlideIndex === fakeData.length - 1) return;
+    if (activeSlideIndex === clients.length - 1) return;
     setFade(true);
     setTimeout(() => {
       setActiveSlideIndex((prev) => prev + 1);
@@ -109,22 +56,20 @@ const Clients = () => {
         }`}
       >
         <Image
-          src={fakeData[activeSlideIndex].image}
+          src={clients[activeSlideIndex].image}
           alt="Client Image"
           width={374}
           height={374}
           className="rounded-sm max-lg:max-w-40"
         />
         <div className="flex flex-col justify-between gap-10">
-          <p className="text-base md:text-lg text-slate-200 max-w-5xl">{`" ${
-            fakeData[activeSlideIndex].review[locale as Locale]
-          } "`}</p>
+          <p className="text-base md:text-lg text-slate-200 max-w-5xl">{`" ${clients[activeSlideIndex].review} "`}</p>
           <div className="space-y-4">
             <p className="text-lg font-bold">
-              {fakeData[activeSlideIndex].name[locale as Locale]}
+              {clients[activeSlideIndex].name}
             </p>
             <p className="text-sm text-slate-200">
-              {fakeData[activeSlideIndex].position[locale as Locale]}
+              {clients[activeSlideIndex].position}
             </p>
           </div>
         </div>
@@ -146,9 +91,9 @@ const Clients = () => {
 
         <button
           onClick={goNext}
-          disabled={activeSlideIndex === fakeData.length - 1 || fade}
+          disabled={activeSlideIndex === clients.length - 1 || fade}
           className={`cursor-pointer p-3 rounded-full ${
-            activeSlideIndex === fakeData.length - 1
+            activeSlideIndex === clients.length - 1
               ? "bg-white/10 text-white cursor-not-allowed!"
               : "bg-white hover:bg-slate-100 text-black"
           }`}

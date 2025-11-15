@@ -1,4 +1,6 @@
 {
+  "back": "رجوع",
+
   "header-navigation": {
     "home": "الرئيسية",
     "about_us": "من نحن",
@@ -6,7 +8,6 @@
     "blog": "المدونة",
     "our_team": "فريقنا",
     "contact_us": "اتصل بنا",
-
     "legal_consultation_services": "خدمات الاستشارات القانونية",
     "tax_law_services": "خدمات قانون الضرائب",
     "corporate_services": "الخدمات القانونية للشركات",
@@ -22,7 +23,6 @@
     "corporate_governance": "حوكمة الشركات",
     "commercial_litigation": "التقاضي التجاري",
     "financial_regulation": "التنظيم المالي",
-
     "book_appointment": "حجز موعد",
     "search": "بحث"
   },
@@ -45,6 +45,14 @@
     "email": "البريد الإلكتروني",
     "subscribe": "اشترك",
     "contacts": "جهات الاتصال",
-    "all_rights_reserved": "جميع الحقوق محفوظة"
+    "all_rights_reserved": "جميع الحقوق محفوظة",
+    "invalid_email": "البريد الالكتروني غير صالح",
+    "email_required": "البريد الالكتروني مطلوب"
+  },
+  "search": {
+    "search_results_for": "نتائج البحث عن",
+    "page": "الصفحة",
+    "of": "من",
+    "no_results": "لا نتائج"
   }
 }

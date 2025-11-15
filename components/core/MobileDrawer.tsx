@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { ChevronDown, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { navigationItems } from "@/constants/navigation";
+import SearchBar from "./SearchBar";
 
 interface MobileDrawerProps {
   open: boolean;
@@ -65,6 +66,10 @@ export default function MobileDrawer({ open, onClose }: MobileDrawerProps) {
         >
           <X />
         </button>
+
+        <div className="md:hidden mb-6">
+          <SearchBar />
+        </div>
 
         <button className="mb-6 p-1.5 border border-white rounded-lg text-sm cursor-pointer hover:bg-background hover:text-foreground transition-colors duration-150">
           {t("book_appointment")}

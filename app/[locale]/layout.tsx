@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import HeaderNavigation from "@/components/core/HeaderNavigation";
 import Footer from "@/components/core/Footer";
+import { ReduxProvider } from "@/store/provider";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -41,9 +42,11 @@ export default async function RootLayout({
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body className={`${dmSans.variable} ${cairo.variable} antialiased`}>
         <NextIntlClientProvider>
-          <HeaderNavigation />
-          {children}
-          <Footer />
+          <ReduxProvider>
+            <HeaderNavigation />
+            {children}
+            <Footer />
+          </ReduxProvider>
         </NextIntlClientProvider>
       </body>
     </html>

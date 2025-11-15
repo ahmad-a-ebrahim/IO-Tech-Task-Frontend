@@ -1,4 +1,5 @@
 {
+  "back": "Back",
   "header-navigation": {
     "home": "Home",
     "about_us": "About Us",
@@ -6,7 +7,6 @@
     "blog": "Blog",
     "our_team": "Our Team",
     "contact_us": "Contact Us",
-
     "legal_consultation_services": "Legal Consultation Services",
     "tax_law_services": "Tax Law Services",
     "corporate_services": "Corporate Services",
@@ -22,7 +22,6 @@
     "corporate_governance": "Corporate Governance",
     "commercial_litigation": "Commercial Litigation",
     "financial_regulation": "Financial Regulation",
-
     "book_appointment": "Book Appointment",
     "search": "Search"
   },
@@ -45,6 +44,14 @@
     "email": "Email",
     "subscribe": "Subscribe",
     "contacts": "Contacts",
-    "all_rights_reserved": "All rights reserved"
+    "all_rights_reserved": "All rights reserved",
+    "invalid_email": "Invalid email address",
+    "email_required": "Email is required"
+  },
+  "search": {
+    "search_results_for": "Search results for",
+    "page": "Page",
+    "of": "of",
+    "no_results": "No results"
   }
 }

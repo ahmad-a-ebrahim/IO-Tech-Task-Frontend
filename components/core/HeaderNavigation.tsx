@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "@/i18n/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { ChevronDown, Menu, Search } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { navigationItems } from "@/constants/navigation";
 import MobileDrawer from "./MobileDrawer";
+import SearchBar from "./SearchBar";
 
 const HeaderNavigation = () => {
   const t = useTranslations("header-navigation");
@@ -85,44 +86,9 @@ const HeaderNavigation = () => {
       </div>
 
       {/* SEARCH BAR */}
-      <div
-        className="
-          relative flex items-center rounded-lg p-1.5
-          transition-border duration-300
-          border border-transparent
-          group
-          hover:border-primary-foreground
-          focus-within:border-primary-foreground
-          max-md:hidden
-        "
-      >
-        <Search className="text-primary-foreground cursor-pointer" size={20} />
-        <input
-          type="text"
-          placeholder={t("search")}
-          className="
-            mx-2
-            w-0
-            opacity-0
-            group-hover:w-28
-            group-hover:xl:w-40
-            group-hover:opacity-100
-            focus:w-28
-            focus:xl:w-40
-            focus:opacity-100
-            transition-[width,opacity]
-            duration-300
-            ease-in-out
-            text-primary-foreground
-            border-none
-            outline-none
-            text-sm
-          "
-        />
+      <div className="max-md:hidden">
+        <SearchBar />
       </div>
-      <Link href={"/search"} className="md:hidden p-1.5">
-        <Search className="text-primary-foreground cursor-pointer" size={20} />
-      </Link>
 
       <div className="flex items-center gap-4">
         <LanguageSwitcher />

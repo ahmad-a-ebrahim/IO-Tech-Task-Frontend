@@ -4,22 +4,14 @@ import facebookIcon from "@/public/facebook.svg";
 import googlePlusIcon from "@/public/google-plus.svg";
 import { footerNavigationItems } from "@/constants/footer-navigation";
 import { getTranslations } from "next-intl/server";
+import SubscribeForm from "../footer/SubscribeForm";
 
 const Footer = async () => {
   const t = await getTranslations("footer");
   return (
     <footer className="flex flex-col p-8 bg-primary text-primary-foreground">
       <div className="self-end flex flex-wrap items-center gap-8">
-        <div className="p-1 rounded-lg bg-background text-foreground flex">
-          <input
-            type="text"
-            placeholder={t("email")}
-            className="bg-transparent border-none outline-none px-2 w-full max-w-full"
-          />
-          <button className="bg-primary hover:bg-primary/95 text-primary-foreground px-3 py-1.5 rounded-md cursor-pointer">
-            {t("subscribe")}
-          </button>
-        </div>
+        <SubscribeForm />
 
         <div className="flex items-center gap-8">
           <p>{t("contacts")}</p>
