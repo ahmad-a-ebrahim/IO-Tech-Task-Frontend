@@ -28,7 +28,7 @@ const HeaderNavigation = () => {
   return (
     <div
       className={`
-        fixed top-0 w-full flex items-center justify-between gap-4 py-4 px-8
+        fixed top-0 w-full flex items-center justify-between gap-4 py-4 px-8 z-50
         text-primary-foreground
         transition-colors duration-300
         ${scrolled ? "bg-primary" : "bg-transparent"}

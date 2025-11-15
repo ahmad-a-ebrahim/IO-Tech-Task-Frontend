@@ -25,5 +25,26 @@
 
     "book_appointment": "حجز موعد",
     "search": "بحث"
+  },
+  "hero": {
+    "read_more": "اقرأ المزيد"
+  },
+  "team": {
+    "our_team": "فريقنا"
+  },
+  "client": {
+    "title": "ماذا يقول عملاؤنا",
+    "description": "يتنوع عملاؤنا بين المستثمرين الأفراد، والشركات المحلية والدولية، بالإضافة إلى شركات فورتشن 500 (Fortune 500)."
+  },
+  "footer": {
+    "about": "من نحن",
+    "our_strategy": "استراتيجيتنا",
+    "our_advantages": "مزايانا",
+    "social_responsibility": "المسؤولية الاجتماعية",
+    "our_services": "خدماتنا",
+    "email": "البريد الإلكتروني",
+    "subscribe": "اشترك",
+    "contacts": "جهات الاتصال",
+    "all_rights_reserved": "جميع الحقوق محفوظة"
   }
 }

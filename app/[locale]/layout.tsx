@@ -5,6 +5,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import HeaderNavigation from "@/components/core/HeaderNavigation";
+import Footer from "@/components/core/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -38,12 +39,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body
-        className={`${inter.variable} ${cairo.variable} antialiased min-h-[2000px]`}
-      >
+      <body className={`${inter.variable} ${cairo.variable} antialiased`}>
         <NextIntlClientProvider>
           <HeaderNavigation />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

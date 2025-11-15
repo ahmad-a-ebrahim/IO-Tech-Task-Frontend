@@ -25,5 +25,26 @@
 
     "book_appointment": "Book Appointment",
     "search": "Search"
+  },
+  "hero": {
+    "read_more": "Read More"
+  },
+  "team": {
+    "our_team": "Our Team"
+  },
+  "client": {
+    "title": "What our clients are saying",
+    "description": "Our clients range from individual investors, to local, international as well as fortune 500 companies."
+  },
+  "footer": {
+    "about": "About",
+    "our_strategy": "Our Strategy",
+    "our_advantages": "Our Advantages",
+    "social_responsibility": "Social Responsibility",
+    "our_services": "Our Services",
+    "email": "Email",
+    "subscribe": "Subscribe",
+    "contacts": "Contacts",
+    "all_rights_reserved": "All rights reserved"
   }
 }
